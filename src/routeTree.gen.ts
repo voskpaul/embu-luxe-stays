@@ -10,33 +10,181 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BoutiqueLodgesMountKenyaRouteImport } from './routes/boutique-lodges-mount-kenya'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as ListYourPropertyRouteImport } from './routes/list-your-property'
+import { Route as LuxuryVillasEmbuRouteImport } from './routes/luxury-villas-embu'
+import { Route as ShortStaysEmbuRouteImport } from './routes/short-stays-embu'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as PropertiesIndexRouteImport } from './routes/properties.index'
+import { Route as PropertiesSlugRouteImport } from './routes/properties.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoutiqueLodgesMountKenyaRoute =
+  BoutiqueLodgesMountKenyaRouteImport.update({
+    id: '/boutique-lodges-mount-kenya',
+    path: '/boutique-lodges-mount-kenya',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ListYourPropertyRoute = ListYourPropertyRouteImport.update({
+  id: '/list-your-property',
+  path: '/list-your-property',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LuxuryVillasEmbuRoute = LuxuryVillasEmbuRouteImport.update({
+  id: '/luxury-villas-embu',
+  path: '/luxury-villas-embu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShortStaysEmbuRoute = ShortStaysEmbuRouteImport.update({
+  id: '/short-stays-embu',
+  path: '/short-stays-embu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PropertiesIndexRoute = PropertiesIndexRouteImport.update({
+  id: '/properties/',
+  path: '/properties/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PropertiesSlugRoute = PropertiesSlugRouteImport.update({
+  id: '/properties/$slug',
+  path: '/properties/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/boutique-lodges-mount-kenya': typeof BoutiqueLodgesMountKenyaRoute
+  '/contact': typeof ContactRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/list-your-property': typeof ListYourPropertyRoute
+  '/luxury-villas-embu': typeof LuxuryVillasEmbuRoute
+  '/short-stays-embu': typeof ShortStaysEmbuRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/properties/$slug': typeof PropertiesSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/properties/': typeof PropertiesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/boutique-lodges-mount-kenya': typeof BoutiqueLodgesMountKenyaRoute
+  '/contact': typeof ContactRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/list-your-property': typeof ListYourPropertyRoute
+  '/luxury-villas-embu': typeof LuxuryVillasEmbuRoute
+  '/short-stays-embu': typeof ShortStaysEmbuRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/properties/$slug': typeof PropertiesSlugRoute
+  '/blog': typeof BlogIndexRoute
+  '/properties': typeof PropertiesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/boutique-lodges-mount-kenya': typeof BoutiqueLodgesMountKenyaRoute
+  '/contact': typeof ContactRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/list-your-property': typeof ListYourPropertyRoute
+  '/luxury-villas-embu': typeof LuxuryVillasEmbuRoute
+  '/short-stays-embu': typeof ShortStaysEmbuRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/properties/$slug': typeof PropertiesSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/properties/': typeof PropertiesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/boutique-lodges-mount-kenya'
+    | '/contact'
+    | '/how-it-works'
+    | '/list-your-property'
+    | '/luxury-villas-embu'
+    | '/short-stays-embu'
+    | '/blog/$slug'
+    | '/properties/$slug'
+    | '/blog/'
+    | '/properties/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/boutique-lodges-mount-kenya'
+    | '/contact'
+    | '/how-it-works'
+    | '/list-your-property'
+    | '/luxury-villas-embu'
+    | '/short-stays-embu'
+    | '/blog/$slug'
+    | '/properties/$slug'
+    | '/blog'
+    | '/properties'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/boutique-lodges-mount-kenya'
+    | '/contact'
+    | '/how-it-works'
+    | '/list-your-property'
+    | '/luxury-villas-embu'
+    | '/short-stays-embu'
+    | '/blog/$slug'
+    | '/properties/$slug'
+    | '/blog/'
+    | '/properties/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BoutiqueLodgesMountKenyaRoute: typeof BoutiqueLodgesMountKenyaRoute
+  ContactRoute: typeof ContactRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  ListYourPropertyRoute: typeof ListYourPropertyRoute
+  LuxuryVillasEmbuRoute: typeof LuxuryVillasEmbuRoute
+  ShortStaysEmbuRoute: typeof ShortStaysEmbuRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  PropertiesSlugRoute: typeof PropertiesSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  PropertiesIndexRoute: typeof PropertiesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +196,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/boutique-lodges-mount-kenya': {
+      id: '/boutique-lodges-mount-kenya'
+      path: '/boutique-lodges-mount-kenya'
+      fullPath: '/boutique-lodges-mount-kenya'
+      preLoaderRoute: typeof BoutiqueLodgesMountKenyaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/list-your-property': {
+      id: '/list-your-property'
+      path: '/list-your-property'
+      fullPath: '/list-your-property'
+      preLoaderRoute: typeof ListYourPropertyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/luxury-villas-embu': {
+      id: '/luxury-villas-embu'
+      path: '/luxury-villas-embu'
+      fullPath: '/luxury-villas-embu'
+      preLoaderRoute: typeof LuxuryVillasEmbuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/short-stays-embu': {
+      id: '/short-stays-embu'
+      path: '/short-stays-embu'
+      fullPath: '/short-stays-embu'
+      preLoaderRoute: typeof ShortStaysEmbuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/properties/': {
+      id: '/properties/'
+      path: '/properties'
+      fullPath: '/properties/'
+      preLoaderRoute: typeof PropertiesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/properties/$slug': {
+      id: '/properties/$slug'
+      path: '/properties/$slug'
+      fullPath: '/properties/$slug'
+      preLoaderRoute: typeof PropertiesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BoutiqueLodgesMountKenyaRoute: BoutiqueLodgesMountKenyaRoute,
+  ContactRoute: ContactRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  ListYourPropertyRoute: ListYourPropertyRoute,
+  LuxuryVillasEmbuRoute: LuxuryVillasEmbuRoute,
+  ShortStaysEmbuRoute: ShortStaysEmbuRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  PropertiesSlugRoute: PropertiesSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  PropertiesIndexRoute: PropertiesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
