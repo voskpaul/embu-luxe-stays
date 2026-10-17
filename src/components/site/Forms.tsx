@@ -18,10 +18,12 @@ const enquirySchema = z.object({
   message: z.string().trim().min(5, "Tell us a little about your stay").max(1000),
 });
 
+type Lead = Partial<Record<"name" | "email" | "phone" | "dates" | "message" | "property" | "location", string>>;
+
 function useLeadForm(kind: string, schema: z.ZodTypeAny) {
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Lead>({});
   const [done, setDone] = useState(false);
-  const [data, setData] = useState<Record<string, string>>({});
+  const [data, setData] = useState<Lead>({});
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const raw = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
@@ -29,18 +31,18 @@ function useLeadForm(kind: string, schema: z.ZodTypeAny) {
     if (!r.success) {
       const errs: Record<string, string> = {};
       r.error.issues.forEach((i: z.ZodIssue) => (errs[String(i.path[0])] = i.message));
-      setErrors(errs);
+      setErrors(errs as Lead);
       return;
     }
     setErrors({});
     await submitLead(kind, raw);
-    setData(raw);
+    setData(raw as Lead);
     setDone(true);
   };
   return { errors, done, data, onSubmit };
 }
 
-function Field({ label, name, error, type = "text", textarea, ...rest }: { label: string; name: string; error?: string; type?: string; textarea?: boolean; placeholder?: string; defaultValue?: string }) {
+function Field({ label, name, error, type = "text", textarea, ...rest }: { label: string; name: string; error?: string | undefined; type?: string; textarea?: boolean; placeholder?: string; defaultValue?: string | undefined }) {
   const id = `f-${name}`;
   return (
     <div>
