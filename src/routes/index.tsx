@@ -22,7 +22,7 @@ function SearchBar() {
       onSubmit={(e) => {
         e.preventDefault();
         const d = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
-        navigate({ to: "/properties", search: { type: d.type || undefined, guests: Number(d.guests) || undefined } });
+        navigate({ to: "/properties", search: { type: d["type"] || undefined, guests: Number(d["guests"]) || undefined } });
       }}
       className="mt-10 grid gap-3 rounded-2xl bg-background p-4 text-foreground shadow-lux sm:grid-cols-2 lg:grid-cols-5">
       <div><label htmlFor="s-loc" className="mb-1 block text-xs font-bold uppercase tracking-wider text-muted-foreground">Location</label>
