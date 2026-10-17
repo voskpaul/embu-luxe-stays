@@ -80,11 +80,11 @@ export const getProperty = (slug: string) => PROPERTIES.find((p) => p.slug === s
 export const formatKES = (n: number) => `KES ${n.toLocaleString("en-KE")}`;
 
 export interface PropertyFilters {
-  type?: string;
-  maxPrice?: number;
-  minBedrooms?: number;
-  guests?: number;
-  amenities?: string[];
+  type?: string | undefined;
+  maxPrice?: number | undefined;
+  minBedrooms?: number | undefined;
+  guests?: number | undefined;
+  amenities?: string[] | undefined;
 }
 
 export function filterProperties(list: Property[], f: PropertyFilters) {
