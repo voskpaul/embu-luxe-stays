@@ -24,7 +24,7 @@ export function PropertyListing({ initial = {}, lockType }: { initial?: Property
           <label htmlFor="fp" className="mb-1.5 block text-sm font-semibold">Max price / night</label>
           <select id="fp" className="field" value={f.maxPrice ?? ""} onChange={(e) => setF({ ...f, maxPrice: Number(e.target.value) || undefined })}>
             <option value="">Any price</option>
-            {[10000, 15000, 25000, 40000].map((v) => <option key={v} value={v}>Up to KES {v.toLocaleString()}</option>)}
+            {[3000, 4500, 6000, 8500].map((v) => <option key={v} value={v}>Up to KES {v.toLocaleString()}</option>)}
           </select>
         </div>
         <div>

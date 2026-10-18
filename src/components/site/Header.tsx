@@ -41,17 +41,21 @@ export function Header() {
         </div>
       </div>
       {open && (
-        <nav aria-label="Mobile" className="border-t bg-background lg:hidden">
-          <ul className="mx-auto max-w-7xl px-4 py-3">
+        <nav aria-label="Mobile" className="fixed inset-x-0 bottom-0 top-[72px] z-50 overflow-y-auto border-t bg-background lg:hidden">
+          <ul className="mx-auto max-w-7xl space-y-1 px-4 py-4">
             {NAV.map((n) => (
               <li key={n.to}>
-                <Link to={n.to} onClick={() => setOpen(false)} className="block rounded-lg px-3 py-3.5 text-base font-semibold"
-                  activeOptions={{ exact: n.to === "/" }} activeProps={{ className: "bg-gold-soft text-navy" }}>
+                <Link to={n.to} onClick={() => setOpen(false)} className="block rounded-xl border-b px-4 py-4 text-lg font-bold text-navy"
+                  activeOptions={{ exact: n.to === "/" }} activeProps={{ className: "bg-gold-soft" }}>
                   {n.label}
                 </Link>
               </li>
             ))}
-            <li className="pt-2"><Link to="/contact" onClick={() => setOpen(false)} className="btn-gold w-full">Enquire Now</Link></li>
+            <li className="grid gap-3 pt-4">
+              <Link to="/contact" onClick={() => setOpen(false)} className="btn-gold w-full">Enquire Now</Link>
+              <Link to="/list-your-property" onClick={() => setOpen(false)} className="btn-navy w-full">List Your Property</Link>
+              <a href="https://wa.me/254740779094" target="_blank" rel="noopener noreferrer" className="text-center font-semibold text-navy">WhatsApp 0740 779 094</a>
+            </li>
           </ul>
         </nav>
       )}

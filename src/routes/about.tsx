@@ -18,13 +18,13 @@ function About() {
   return (
     <>
       <PageHero eyebrow="About us" title="Exceptional stays, linked with local care" image={lodge} />
-      <Section eyebrow="Our story" title="Born in Embu, built on hospitality">
+      <Section eyebrow="Our story" title="LuxeLink Embu">
         <div className="grid items-center gap-10 md:grid-cols-2">
-          <div className="space-y-4 text-foreground/85">
-            <p>LuxeLink EMBU began with a simple observation: Embu has remarkable properties, but discerning guests struggled to find and trust them.</p>
-            <p>We set out to change that — personally visiting every villa, apartment and lodge, and connecting guests with the stays that truly match their expectations.</p>
-            <h3 className="pt-4 text-xl font-bold text-navy">Our mission</h3>
-            <p>To link every guest to an exceptional stay, and every quality property owner to the guests who will cherish it.</p>
+          <div className="space-y-4 text-lg text-foreground/85">
+            <h3 className="text-xl font-bold text-navy">Quality short-stay rooms & seamless service in Embu.</h3>
+            <p>We connect you to reliable, comfortable places and can arrange essentials packages.</p>
+            <p>Ideal for business and discerning travelers.</p>
+            <p className="pt-2 font-display text-2xl font-bold text-gold">LuxeLink Embu – Quality stays, sorted</p>
           </div>
           <img src={villa} alt="Elegant villa living room curated by LuxeLink EMBU" loading="lazy" width={1200} height={800} className="rounded-2xl shadow-lux" />
         </div>
