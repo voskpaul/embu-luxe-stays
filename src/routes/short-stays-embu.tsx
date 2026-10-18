@@ -9,7 +9,7 @@ export const Route = createFileRoute("/short-stays-embu")({
     <>
       <PageHero eyebrow="Short stays" title="Premium short stays in Embu" image={apartment}
         intro="Serviced apartments and private cottages with hotel-grade comfort — for a night, a week or a month." />
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6"><h2 className="sr-only">Short stay properties</h2><PropertyListing initial={{ maxPrice: 15000 }} /></section>
+      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6"><h2 className="sr-only">Short stay properties</h2><PropertyListing initial={{ maxPrice: 4500 }} /></section>
       <CtaBand />
     </>
   ),

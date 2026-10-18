@@ -26,7 +26,7 @@ export interface Property {
 export const PROPERTIES: Property[] = [
   {
     slug: "kirimiri-ridge-villa", name: "Kirimiri Ridge Villa", type: "Villa", location: "Kirimiri Hills, Embu",
-    pricePerNight: 38000, bedrooms: 5, guests: 10, featured: true,
+    pricePerNight: 8500, bedrooms: 5, guests: 10, featured: true,
     amenities: ["Infinity pool", "Mount Kenya views", "Private chef", "Wi-Fi", "Parking", "Fireplace"],
     images: [hero, villa, apartment], lat: -0.52, lng: 37.45,
     summary: "A hillside sanctuary with an infinity pool facing Mount Kenya.",
@@ -34,7 +34,7 @@ export const PROPERTIES: Property[] = [
   },
   {
     slug: "izaak-walton-suites", name: "Izaak Walton Penthouse Suites", type: "Apartment", location: "Embu Town",
-    pricePerNight: 14500, bedrooms: 2, guests: 4, featured: true,
+    pricePerNight: 4500, bedrooms: 2, guests: 4, featured: true,
     amenities: ["Balcony", "Wi-Fi", "Workspace", "Parking", "Housekeeping"],
     images: [apartment, villa, hero], lat: -0.535, lng: 37.457,
     summary: "Serviced penthouse living in the heart of Embu Town.",
@@ -42,7 +42,7 @@ export const PROPERTIES: Property[] = [
   },
   {
     slug: "mount-kenya-forest-lodge", name: "Mount Kenya Forest Lodge", type: "Boutique Lodge", location: "Castle Forest, near Embu",
-    pricePerNight: 26000, bedrooms: 6, guests: 12, featured: true,
+    pricePerNight: 7000, bedrooms: 6, guests: 12, featured: true,
     amenities: ["Forest trails", "Mount Kenya views", "Restaurant", "Fireplace", "Wi-Fi"],
     images: [lodge, hero, villa], lat: -0.42, lng: 37.33,
     summary: "Thatched forest cottages on the slopes of Mount Kenya.",
@@ -50,7 +50,7 @@ export const PROPERTIES: Property[] = [
   },
   {
     slug: "rupingazi-river-cottage", name: "Rupingazi River Cottage", type: "Cottage", location: "Rupingazi, Embu",
-    pricePerNight: 11000, bedrooms: 2, guests: 4,
+    pricePerNight: 3500, bedrooms: 2, guests: 4,
     amenities: ["Garden", "Wi-Fi", "Parking", "Fireplace"],
     images: [villa, lodge, apartment], lat: -0.55, lng: 37.47,
     summary: "A riverside hideaway for quiet weekend escapes.",
@@ -58,7 +58,7 @@ export const PROPERTIES: Property[] = [
   },
   {
     slug: "njukiri-garden-villa", name: "Njukiri Garden Villa", type: "Villa", location: "Njukiri, Embu",
-    pricePerNight: 22000, bedrooms: 4, guests: 8,
+    pricePerNight: 6000, bedrooms: 4, guests: 8,
     amenities: ["Pool", "Garden", "Wi-Fi", "Parking", "Private chef"],
     images: [villa, hero, apartment], lat: -0.51, lng: 37.48,
     summary: "Family-friendly villa beside Njukiri forest.",
@@ -66,7 +66,7 @@ export const PROPERTIES: Property[] = [
   },
   {
     slug: "embu-executive-residence", name: "Embu Executive Residence", type: "Apartment", location: "Blue Valley, Embu",
-    pricePerNight: 9500, bedrooms: 1, guests: 2,
+    pricePerNight: 2500, bedrooms: 1, guests: 2,
     amenities: ["Workspace", "Wi-Fi", "Gym", "Parking", "Housekeeping"],
     images: [apartment, villa, lodge], lat: -0.53, lng: 37.46,
     summary: "Refined one-bedroom residence for business travellers.",

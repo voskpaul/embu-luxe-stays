@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const items = [
-    { icon: MessageCircle, label: "WhatsApp", value: "Chat instantly", href: whatsappLink() },
+    { icon: MessageCircle, label: "WhatsApp", value: "0740 779 094", href: whatsappLink() },
     { icon: Phone, label: "Phone", value: SITE.phone, href: SITE.phoneHref },
     { icon: Mail, label: "Email", value: SITE.email, href: `mailto:${SITE.email}` },
     { icon: MapPin, label: "Office", value: SITE.address },

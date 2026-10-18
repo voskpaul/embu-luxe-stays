@@ -2,9 +2,9 @@
 export const SITE = {
   name: "LuxeLink EMBU",
   tagline: "High-End Hospitality & Accommodation Linking Service",
-  phone: "+254 700 000 000",
-  phoneHref: "tel:+254700000000",
-  whatsapp: "254700000000",
+  phone: "0740 779 094",
+  phoneHref: "tel:+254740779094",
+  whatsapp: "254740779094",
   email: "hello@luxelinkembu.co.ke",
   address: "Embu Town, Embu County, Kenya",
   socials: {
